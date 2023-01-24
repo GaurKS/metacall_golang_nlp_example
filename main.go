@@ -37,7 +37,7 @@ func main() {
 	// Defer MetaCall destruction
 	defer metacall.Destroy()
 
-	scripts := []string{"nlp_test.py"}
+	scripts := []string{"nlp_script.py"}
 
 	if err := metacall.LoadFromFile("py", scripts); err != nil {
 		fmt.Println(err)
