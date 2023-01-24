@@ -17,7 +17,7 @@
 #	limitations under the License.
 #
 
-FROM golang:1.18-bullseye
+FROM golang:1.19-bullseye  
 
 # # Image descriptor
 # LABEL copyright.name="Vicente Eduardo Ferrer Garcia" \
@@ -42,7 +42,7 @@ RUN apt-get update \
 WORKDIR /root
 
 # Clone and build the project
-RUN git clone --branch v0.5.4 https://github.com/metacall/core \
+RUN git clone --branch v0.6.3 https://github.com/metacall/core \
 	&& mkdir core/build && cd core/build \
 	&& cmake \
 		-DNODEJS_CMAKE_DEBUG=On \
